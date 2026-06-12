@@ -36,3 +36,14 @@ Explanation: La condición $3=="FINAL" filtra solo las filas de esa asignación.
 Command: awk -F',' 'NR>1 && $4 < $5*0.6 {count++} END {print count}' Lab03-data.csv
 Result: 50
 Explanation: La condición $4 < $5*0.6 compara el puntaje obtenido contra el 60% del máximo usando $5 en lugar de un número fijo, ya que el máximo varía por asignación. Cada fila que cumple la condición incrementa el contador.
+
+## Task 5
+Script: task5.awk
+Command: awk -f task5.awk Lab03-data.csv | sort
+Result:
+Name      Low High    Average
+FINAL     116  200     156.86
+H01        46  100      82.71
+H02        55  100      77.57
+...
+Explanation: Tres arrays asociativos indexados por $3 (nombre de asignación): lo[] y hi[] rastrean mínimo y máximo con if, sum[] y cnt[] acumulan datos para el promedio. El bloque END itera con for (a in sum) e imprime cada fila con printf "%.2f".
