@@ -67,3 +67,24 @@ Sam         72.90 C
 Shane       93.12 A
 Tomas       82.22 B
 Explanation: Dos arrays indexados por $1 (nombre): earned[] acumula puntos obtenidos y possible[] acumula puntos posibles. En END se divide earned[s]/possible[s]*100 para el porcentaje real. La cadena if/else if asigna la letra según la escala.
+
+## Task 7
+Script: run.sh
+Command: ./run.sh Lab03-data.csv
+Result:
+Name       Pct    Grade
+Andrew      73.69 C
+Ava         81.43 B
+Chelsey     62.65 D
+Diana       62.08 D
+Eliza       84.16 B
+Jackson     78.64 C
+Kenji       86.45 B
+Lucia       89.53 B
+Maria       79.57 C
+Noah        63.08 D
+Priya       71.04 C
+Sam         72.90 C
+Shane       93.12 A
+Tomas       82.22 B
+Explanation: El script recibe el archivo como $1. Imprime el header con echo, luego ejecuta awk -f task6.awk contra el archivo y canaliza la salida a sort para ordenar alfabéticamente por nombre.
