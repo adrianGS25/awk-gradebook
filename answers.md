@@ -47,3 +47,23 @@ H01        46  100      82.71
 H02        55  100      77.57
 ...
 Explanation: Tres arrays asociativos indexados por $3 (nombre de asignación): lo[] y hi[] rastrean mínimo y máximo con if, sum[] y cnt[] acumulan datos para el promedio. El bloque END itera con for (a in sum) e imprime cada fila con printf "%.2f".
+
+## Task 6
+Script: task6.awk
+Command: awk -f task6.awk Lab03-data.csv | sort
+Result:
+Andrew      73.69 C
+Ava         81.43 B
+Chelsey     62.65 D
+Diana       62.08 D
+Eliza       84.16 B
+Jackson     78.64 C
+Kenji       86.45 B
+Lucia       89.53 B
+Maria       79.57 C
+Noah        63.08 D
+Priya       71.04 C
+Sam         72.90 C
+Shane       93.12 A
+Tomas       82.22 B
+Explanation: Dos arrays indexados por $1 (nombre): earned[] acumula puntos obtenidos y possible[] acumula puntos posibles. En END se divide earned[s]/possible[s]*100 para el porcentaje real. La cadena if/else if asigna la letra según la escala.
