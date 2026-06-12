@@ -31,3 +31,8 @@ Sam        152
 Ava        172
 Chelsey    142
 Explanation: La condición $3=="FINAL" filtra solo las filas de esa asignación. printf formatea la salida con %-10s para el nombre alineado a la izquierda en 10 espacios y %3s para el puntaje alineado a la derecha.
+
+## Task 4
+Command: awk -F',' 'NR>1 && $4 < $5*0.6 {count++} END {print count}' Lab03-data.csv
+Result: 50
+Explanation: La condición $4 < $5*0.6 compara el puntaje obtenido contra el 60% del máximo usando $5 en lugar de un número fijo, ya que el máximo varía por asignación. Cada fila que cumple la condición incrementa el contador.
